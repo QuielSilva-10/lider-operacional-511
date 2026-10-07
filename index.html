@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Líder Operacional 511 | Gestão, Processos e Resultados</title>
+<meta name="description" content="Líder Operacional 511 — gestão de equipes, processos e resultados. Operações que funcionam de ponta a ponta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0d1b33;
+  --navy-2:#132a4d;
+  --steel:#4a6fa5;
+  --light:#eef2f8;
+  --white:#ffffff;
+  --grey:#8a97ab;
+  --accent:#c9a227;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  color:var(--navy);
+  background:var(--white);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{line-height:1.15;font-weight:800;letter-spacing:-.02em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(13,27,51,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{color:#fff;font-weight:800;letter-spacing:.12em;font-size:.82rem;text-transform:uppercase}
+.brand span{color:var(--accent)}
+.nav-links{display:flex;gap:28px}
+.nav-links a{
+  color:rgba(255,255,255,.72);text-decoration:none;font-size:.86rem;
+  font-weight:400;transition:color .2s;
+}
+.nav-links a:hover{color:#fff}
+@media(max-width:720px){.nav-links{display:none}}
+
+.hero{
+  position:relative;
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 55%,#1b3a63 100%);
+  color:#fff;
+  overflow:hidden;
+  padding:88px 0 96px;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 78% 30%,rgba(201,162,39,.16),transparent 45%),
+    repeating-linear-gradient(115deg,transparent 0 46px,rgba(255,255,255,.028) 46px 47px);
+  pointer-events:none;
+}
+.hero-grid{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:64px;align-items:center;
+}
+.eyebrow{
+  display:inline-block;font-size:.7rem;font-weight:600;
+  letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:22px;
+  border-left:2px solid var(--accent);padding-left:12px;
+}
+.hero h1{font-size:clamp(2.2rem,5vw,3.5rem);margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{font-size:1.06rem;color:rgba(255,255,255,.78);max-width:520px;font-weight:300}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:14px 28px;border-radius:6px;text-decoration:none;
+  font-size:.9rem;font-weight:600;transition:transform .2s,box-shadow .2s,background .2s;
+}
+.btn-primary{background:var(--accent);color:var(--navy)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(201,162,39,.34)}
+.btn-ghost{
+  border:1px solid rgba(255,255,255,.3);color:#fff;
+}
+.btn-ghost:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+
+.portrait{
+  position:relative;justify-self:center;
+}
+.portrait img{
+  width:100%;max-width:360px;display:block;
+  border-radius:8px;
+  box-shadow:0 30px 70px rgba(0,0,0,.45);
+  filter:saturate(1.02) contrast(1.04);
+}
+.portrait::after{
+  content:'';position:absolute;inset:0;
+  border:1px solid rgba(201,162,39,.5);
+  border-radius:8px;
+  transform:translate(14px,14px);
+  z-index:-1;
+}
+.portrait::before{
+  content:'';position:absolute;
+  left:-18px;top:26px;width:70px;height:2px;
+  background:var(--accent);
+}
+@media(max-width:860px){
+  .hero{padding:56px 0 64px}
+  .hero-grid{grid-template-columns:1fr;gap:44px;text-align:left}
+  .portrait{justify-self:start}
+  .portrait img{max-width:280px}
+}
+
+.strip{background:var(--navy-2);color:#fff;padding:26px 0;border-top:1px solid rgba(255,255,255,.07)}
+.strip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
+.strip-num{font-size:1.9rem;font-weight:800;color:var(--accent);line-height:1}
+.strip-lab{font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.62);margin-top:8px}
+@media(max-width:640px){.strip-grid{grid-template-columns:1fr;gap:20px}}
+
+section{padding:92px 0}
+.sec-head{max-width:660px;margin-bottom:52px}
+.sec-tag{
+  font-size:.7rem;font-weight:600;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--steel);margin-bottom:14px;display:block;
+}
+.sec-head h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:18px}
+.sec-head p{color:#4d5a70;font-size:1.02rem;font-weight:300}
+
+#sobre{background:var(--light)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+@media(max-width:860px){.two{grid-template-columns:1fr;gap:36px}}
+.two p{color:#41506a;font-weight:300;margin-bottom:18px}
+.values{display:grid;gap:16px;margin-top:8px}
+.value{
+  display:flex;gap:16px;align-items:flex-start;
+  background:#fff;padding:20px 22px;border-radius:8px;
+  border-left:3px solid var(--accent);
+  box-shadow:0 2px 14px rgba(13,27,51,.06);
+}
+.value strong{display:block;font-size:.95rem;margin-bottom:3px}
+.value span{font-size:.88rem;color:#5c6b83;font-weight:300}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:24px}
+.card{
+  background:#fff;border:1px solid #e2e8f1;border-radius:10px;
+  padding:34px 28px;transition:transform .25s,box-shadow .25s,border-color .25s;
+}
+.card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(13,27,51,.12);border-color:var(--steel)}
+.card-icon{
+  width:44px;height:44px;border-radius:8px;
+  background:var(--navy);color:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:1rem;margin-bottom:20px;
+}
+.card h3{font-size:1.08rem;margin-bottom:11px}
+.card p{font-size:.9rem;color:#5c6b83;font-weight:300}
+
+#contato{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);
+  color:#fff;text-align:center;
+}
+#contato .sec-head{margin:0 auto 44px;text-align:center}
+#contato .sec-tag{color:var(--accent)}
+#contato .sec-head p{color:rgba(255,255,255,.72)}
+#contato .hero-actions{justify-content:center}
+.contact-lines{display:flex;gap:40px;justify-content:center;flex-wrap:wrap;margin-top:44px}
+.contact-line{font-size:.86rem;color:rgba(255,255,255,.7)}
+.contact-line b{display:block;color:var(--accent);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px;font-weight:600}
+
+footer{background:#08111f;color:rgba(255,255,255,.42);padding:30px 0;font-size:.78rem;text-align:center}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">LÍDER OPERACIONAL <span>511</span></div>
+    <nav class="nav-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#atuacao">Atuação</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Gestão · Processos · Resultados</span>
+      <h1>Operações que <em>funcionam</em> de ponta a ponta.</h1>
+      <p>Liderança operacional com foco em resultado, eficiência e desenvolvimento de pessoas. Planejar, executar, medir e melhorar — nessa ordem, sem atalho.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contato">Falar comigo</a>
+        <a class="btn btn-ghost" href="#atuacao">Ver atuação</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <img src="photo.jpg" alt="Líder Operacional 511">
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap strip-grid">
+    <div><div class="strip-num">Ponta a ponta</div><div class="strip-lab">Visão da operação</div></div>
+    <div><div class="strip-num">Time alinhado</div><div class="strip-lab">Gente e processo</div></div>
+    <div><div class="strip-num">Melhoria contínua</div><div class="strip-lab">Padrão alto sempre</div></div>
+  </div>
+</div>
+
+<section id="sobre">
+  <div class="wrap two">
+    <div>
+      <span class="sec-tag">Sobre</span>
+      <div class="sec-head" style="margin-bottom:0">
+        <h2>Liderança com disciplina, responsabilidade e visão de dono.</h2>
+      </div>
+      <p style="margin-top:22px">Sou responsável por organizar rotinas, acompanhar indicadores, resolver problemas com agilidade e garantir que cada processo funcione do início ao fim com qualidade e consistência.</p>
+      <p>Acredito que uma operação forte se constrói com time alinhado, comunicação clara e melhoria contínua. Trabalho lado a lado com a equipe, mantendo o padrão alto mesmo nos dias corridos.</p>
+      <p>Gosto de gente comprometida, processo bem feito e conversa franca. Se envolveu, entrega.</p>
+    </div>
+    <div class="values">
+      <div class="value"><div><strong>Clareza de metas</strong><span>Cada pessoa sabe o que entrega e por quê.</span></div></div>
+      <div class="value"><div><strong>Acompanhamento próximo</strong><span>Gestão no chão da operação, não na planilha.</span></div></div>
+      <div class="value"><div><strong>Foco em eficiência</strong><span>Menos retrabalho, mais previsibilidade.</span></div></div>
+      <div class="value"><div><strong>Comunicação direta</strong><span>Alinhamento rápido, decisão sem ruído.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="atuacao">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag">Atuação</span>
+      <h2>O que eu entrego no dia a dia</h2>
+      <p>Da organização da rotina à entrega final — cuidando do processo, das pessoas e do resultado.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">01</div>
+        <h3>Gestão de equipes</h3>
+        <p>Delegação, treinamento e acompanhamento do time, com metas claras e feedback constante.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">02</div>
+        <h3>Processos e rotinas</h3>
+        <p>Padronização do fluxo de trabalho, definição de responsabilidades e redução de falhas.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">03</div>
+        <h3>Indicadores e resultados</h3>
+        <p>Medição do que importa, leitura de números e ação corretiva no tempo certo.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">04</div>
+        <h3>Resolução de problemas</h3>
+        <p>Decisão rápida sob pressão, com o operacional rodando e o cliente atendido.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">05</div>
+        <h3>Melhoria contínua</h3>
+        <p>Ajuste constante de método: o que funciona é mantido, o que trava é corrigido.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">06</div>
+        <h3>Comunicação e alinhamento</h3>
+        <p>Ponte entre operação, liderança e clientes — informação chega inteira e no prazo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag">Contato</span>
+      <h2>Vamos alinhar</h2>
+      <p>Estou à disposição para alinhamentos, demandas operacionais e parcerias.</p>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://wa.me/5547996443666" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      <a class="btn btn-ghost" href="mailto:quielsilvafreelancer@gmail.com">Enviar e-mail</a>
+    </div>
+    <div class="contact-lines">
+      <div class="contact-line"><b>WhatsApp</b>(47) 99644-3666</div>
+      <div class="contact-line"><b>E-mail</b>quielsilvafreelancer@gmail.com</div>
+      <div class="contact-line"><b>Função</b>Líder Operacional 511</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Líder Operacional 511 · Gestão, Processos e Resultados</div>
+</footer>
+
+</body>
+</html>

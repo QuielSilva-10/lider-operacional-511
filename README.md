@@ -2,7 +2,7 @@
 
 Site pessoal e profissional — gestão de equipes, processos e resultados.
 
-## Estrutura
+## Arquivos
 
 - `index.html` — página única responsiva
 - `photo.jpg` — foto de perfil usada no topo do site

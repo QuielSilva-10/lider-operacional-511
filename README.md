@@ -1,3 +1,13 @@
-Líder Operacional 511 — site pessoal e profissional.
+# Líder Operacional 511
 
-Publicado via GitHub Pages.
+Site pessoal e profissional — gestão de equipes, processos e resultados.
+
+## Estrutura
+
+- `index.html` — página única responsiva
+- `photo.jpg` — foto de perfil usada no topo do site
+
+## Contato
+
+- WhatsApp: (47) 99644-3666
+- E-mail: quielsilvafreelancer@gmail.com
